@@ -1,0 +1,84 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.pyo
+*.so
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+.mypy_cache/
+.ruff_cache/
+
+# ---- 虚拟环境 ----
+venv/
+.venv/
+env/
+ENV/
+
+# ---- 测试 / 覆盖率 ----
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+
+# ---- 编辑器 ----
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# ---- 凭据 ----
+.env
+.env.*
+!.env.example
+
+# ---- 数据集（NIST SD04 / SD27 有分发许可，不入库）----
+# 注意：下面这些带前导斜杠的规则只匹配仓库根目录，避免把 latentfp/data/ 这类
+# 源码子包一起忽略掉。
+/data/
+/datasets/
+/sd04/
+/sd04_png/
+/processed_sd04_dataset/
+/cmc_dataset/
+/gallery/
+/probe/
+
+# ---- 模型权重（含第三方 FingerNet 发布权重）----
+*.pth
+*.pt
+*.h5
+*.hdf5
+*.ckpt
+*.npy
+*.npz
+*.pkl
+*.model
+/checkpoints*/
+/method_outputs/
+
+# ---- 训练产物 / 实验中间结果（只匹配根目录）----
+/runs/
+/logs/
+/logs_*/
+/output/
+/outputs*/
+/results*/
+/compare/
+/test/
+/test2/
+/testouput/
+/manual_annotations/
+/*.log
+*.log
+
+# ---- 图像产物（本仓库不含任何被跟踪的图片）----
+*.png
+*.bmp
+*.jpg
+*.jpeg
+*.tif
+*.tiff
