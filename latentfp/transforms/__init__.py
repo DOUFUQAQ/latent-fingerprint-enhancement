@@ -1,0 +1,1 @@
+"""Latent-print degradation synthesis and patch bookkeeping."""
