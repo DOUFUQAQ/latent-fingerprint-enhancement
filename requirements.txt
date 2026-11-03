@@ -1,0 +1,26 @@
+# ---- 核心（纯 numpy / OpenCV 的合成与传统增强部分）----
+numpy>=1.21
+opencv-python>=4.5
+
+# ---- 深度学习（latentfp / latentfp_v2 / repair 的训练与推理）----
+torch>=1.13
+torchvision>=0.14
+
+# ---- 梯度域增强：TV 分解、Gabor 字典稀疏编码 ----
+scipy>=1.7
+scikit-learn>=1.0
+
+# ---- 细节点提取 / 指标（evaluation、repair/output.py）----
+scikit-image>=0.19
+
+# ---- 可视化与进度条 ----
+matplotlib>=3.5
+tqdm>=4.62
+
+# ------------------------------------------------------------------------------
+# 以下依赖本仓库不列入：scripts/process_sd04_dataset.py 调用的是「第三方 FingerNet
+# Keras 发布版」（src/train_test_deploy.py / src/utils.py / Model.model），作者没有把
+# 它拷进本仓库，因此该脚本必须在你本地已有一份 FingerNet 检出时才能运行。
+# 需要的话自行安装：
+#   keras>=2.2,<2.4  tensorflow>=1.13,<2.0
+# ------------------------------------------------------------------------------
